@@ -28,12 +28,12 @@ burger.addEventListener("change", () => {
   nav.style.transform = isNavOpened ? "scaleY(1)" : "scaleY(0)";
 });
 
-window.addEventListener('resize', ()=>{
-  if(window.innerWidth>768){
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
     nav.style.transform = "scaleY(1)";
-    burger.checked = false
-  } else{
+    burger.checked = false;
+  } else {
     nav.style.transform = "scaleY(0)";
-    burger.checked = false
+    burger.checked = false;
   }
-})
+});
