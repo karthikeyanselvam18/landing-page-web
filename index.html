@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/diet.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/index.css" />
     <link
       rel="stylesheet"
@@ -11,6 +12,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/index.js" defer></script>
     <title>Plate Perfect</title>
   </head>
   <body>
@@ -18,7 +22,21 @@
       <a href="#" class="logo">
         <h1>Plate Perfect <i class="fa-solid fa-plate-wheat"></i></h1>
       </a>
-      <div class="headlines">
+      <label class="burger" for="burger">
+        <input type="checkbox" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#prices">Prices</a>
+        <a href="#testimonial">Testimonial</a>
+      </nav>
+    </header>
+    <main>
+      <div class="headlines" id="home">
         <h1 class="headline">Discover the Joy of Effortless Meal Planning</h1>
         <span class="subtitle"
           >Transform Your Kitchen Experience with Personalized Recipes and
@@ -29,14 +47,12 @@
         <input type="email" placeholder="Enter your email address" />
         <button>Start free trial</button>
       </div>
-    </header>
-    <main>
       <section class="hero">
         <div class="image-container">
           <img src="assets/images/plate.png" alt="" />
         </div>
       </section>
-      <section class="features">
+      <section class="features overflow-hidden " id="features">
         <div class="card">
           <div class="feature">
             <span class="feature-icon">
@@ -90,6 +106,342 @@
           </div>
         </div>
       </section>
+      <span class="prices-title" id="prices"><h1>Prices</h1></span>
+      <section class="plans">
+        <div class="pack-container">
+          <div class="header">
+            <p class="title">BASIC PLAN</p>
+            <div class="price-container">
+              <span>$</span>9.99
+              <span>/mo</span>
+            </div>
+          </div>
+          <div>
+            <ul class="lists">
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Weekly personalized meal plans</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Access to curated recipes</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Automated grocery lists</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Health tracking tools</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Community support</p>
+              </li>
+            </ul>
+          </div>
+          <div class="button-container">
+            <button type="button">Buy Now</button>
+          </div>
+        </div>
+        <div class="pack-container">
+          <div class="header">
+            <p class="title">PREMIUM PLAN</p>
+            <div class="price-container">
+              <span>$</span>19.99
+              <span>/mo</span>
+            </div>
+          </div>
+          <div>
+            <ul class="lists">
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Everything included in the Basic Plan</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Priority customer support</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Exclusive access to new recipes</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Enhanced health tracking features</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Personalized nutrition consultations</p>
+              </li>
+            </ul>
+          </div>
+          <div class="button-container">
+            <button type="button">Buy Now</button>
+          </div>
+        </div>
+        <div class="pack-container">
+          <div class="header">
+            <p class="title">FAMILY PLAN</p>
+            <div class="price-container">
+              <span>$</span>29.99
+              <span>/mo</span>
+            </div>
+          </div>
+          <div>
+            <ul class="lists">
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Everything included in the Premium Plan</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Meal plans for up to 4 family members</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Customizable portion sizes</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Additional recipes tailored for families</p>
+              </li>
+              <li class="list">
+                <span>
+                  <svg
+                    aria-hidden="true"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 12.75l6 6 9-13.5"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <p>Family cooking workshops</p>
+              </li>
+            </ul>
+          </div>
+          <div class="button-container">
+            <button type="button">Buy Now</button>
+          </div>
+        </div>
+      </section>
       <section class="social-proof">
         <div class="proof">
           <i class="fas fa-newspaper icon"></i>
@@ -107,35 +459,52 @@
           <h1 class="title">Rated 5 Stars on TasteTrack</h1>
         </div>
       </section>
-      <h1 class="testimonials-title">Testimonials from our customers</h1>
-      <section class="testimonials">
+      <h1 class="testimonials-title" id="testimonial">
+        Testimonials from our customers
+      </h1>
+      <section class="testimonials overflow-hidden">
         <div class="testimonial">
-            <p>"I love how easy it is to plan my meals each week with this service. The recipes are delicious, and the grocery lists make shopping a breeze!"</p>
-            <span>- Sarah M</span>
+          <p>
+            "I love how easy it is to plan my meals each week with this service.
+            The recipes are delicious, and the grocery lists make shopping a
+            breeze!"
+          </p>
+          <span>- Sarah M</span>
         </div>
         <div class="testimonial">
-            <p>"As a busy professional, I appreciate the convenience of having personalized meal plans delivered to my inbox. It's been a game-changer for my cooking routine!"</p>
-            <span>- John L</span>
+          <p>
+            "As a busy professional, I appreciate the convenience of having
+            personalized meal plans delivered to my inbox. It's been a
+            game-changer for my cooking routine!"
+          </p>
+          <span>- John L</span>
         </div>
         <div class="testimonial">
-            <p>"The community aspect of this platform is fantastic. I've connected with so many like-minded individuals and discovered new recipes that I wouldn't have found otherwise."</p>
-            <span>- Emily W</span>
+          <p>
+            "The community aspect of this platform is fantastic. I've connected
+            with so many like-minded individuals and discovered new recipes that
+            I wouldn't have found otherwise."
+          </p>
+          <span>- Emily W</span>
         </div>
       </section>
     </main>
     <footer>
-        <div class="cta">
+      <div class="cta">
         <span class="cta-message">
-            Join Our Community and Elevate Your Cooking Experience!
+          Join Our Community and Elevate Your Cooking Experience!
         </span>
-            <div class="cta-input">
-                <input type="email" placeholder="Enter your email address" />
-            <button>Start free trial</button>
-            </div>
-          </div>
-          <div class="footer-message">
-            <p>PlatePerfect © 2024. All rights reserved. Privacy Policy | Terms of Service | Contact Us</p>
-          </div>
+        <div class="cta-input">
+          <input type="email" placeholder="Enter your email address" />
+          <button>Start free trial</button>
+        </div>
+      </div>
+      <div class="footer-message">
+        <p>
+          PlatePerfect © 2024. All rights reserved. Privacy Policy | Terms of
+          Service | Contact Us
+        </p>
+      </div>
     </footer>
   </body>
 </html>
