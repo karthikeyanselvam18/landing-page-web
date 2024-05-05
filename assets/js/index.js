@@ -16,6 +16,14 @@ window.addEventListener("resize", () => {
   }
 });
 
+const navList = document.querySelectorAll("nav a")
+navList.forEach(button=>{
+  button.addEventListener("click",()=>{
+    nav.style.transform = "scaleY(0)";
+    burger.checked = false;
+  })
+})
+
 const featuresContainer = document.querySelector(".features");
 const featureObjs = [
   {
